@@ -1,0 +1,15 @@
+<mat-card>
+    <span>Add new user</span>
+    <form [formGroup]="adduserform" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-entry-field">
+            <input matInput placeholder="User Name" formControlName="Name"/>
+        </mat-form-field>
+        <mat-form-field class="new-entry-field">
+            <input matInput placeholder="User Address" formControlName="Address"/>
+        </mat-form-field>
+        <mat-form-field class="new-entry-field">
+            <input matInput placeholder="User EmailId" formControlName="EmailId"/>
+        </mat-form-field>
+        <button mat-raised-button [disabled] = "!adduserform.valid">Add user</button>
+    </form>
+</mat-card>
